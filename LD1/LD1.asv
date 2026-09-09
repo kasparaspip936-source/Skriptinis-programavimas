@@ -1,0 +1,8 @@
+%Kasparas Pipiras
+%EEf-25/2
+%2026-09-09
+
+x = 1:32;
+y = x^.2;
+
+plot(x, y, 'o-r', x, y/3, )
