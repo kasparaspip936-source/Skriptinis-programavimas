@@ -1,0 +1,48 @@
+%Kasparas Pipiras
+%EEf-25/2
+%2026-09-23
+
+clear
+% 1. a)
+[x, y] = meshgrid(-1:0.1:1);
+r = sqrt(x.^2 + y.^2);
+z = exp(r^2);
+surf(x, y, z);
+view(30, 30);
+colormap summer
+xlabel('X')
+ylabel('Y')
+zlabel('Z')
+title('z = exp(x^2 + y^2)')
+%% b)
+clear
+[x, y] = meshgrid(-2:0.1:1);
+z = 1 - 2.*x.^2 - 3.*y.^2;
+surf(x, y, z);
+colormap turbo
+shading("flat")
+view(45, 45);
+xlabel('X')
+ylabel('Y')
+zlabel('Z')
+title('z = 1 - 2x^2 - 3y^2')
+%% P.
+clear
+[x, y] = meshgrid(-2:0.1:2);
+z = 1 - (x.^2 + y.^2);
+tiledlayout(1, 3);
+
+nexttile
+surf(x, y, z);
+shading("flat");
+
+nexttile
+surf(x, y, z);
+shading("faceted");
+
+nexttile
+surf(x, y, z);
+shading("interp");
+
+
+
