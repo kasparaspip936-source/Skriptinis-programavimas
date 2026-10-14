@@ -1,0 +1,6 @@
+function Y1()
+    global x
+    while x<0
+        x = -1*sin(x);
+    end
+end
